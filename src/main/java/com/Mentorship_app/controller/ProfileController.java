@@ -18,7 +18,7 @@ import com.Mentorship_app.Entity.Profile;
 import com.Mentorship_app.services.ProfileService;
 
 @RestController
-@CrossOrigin("https://extraordinary-cendol-db85f2.netlify.app/")
+@CrossOrigin("http://localhost:5173")
 public class ProfileController {
 	@Autowired
 	ProfileService profileservice;
