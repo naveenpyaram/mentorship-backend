@@ -15,7 +15,7 @@ import com.Mentorship_app.services.ProfileService;
 import com.Mentorship_app.services.UserService;
 
 @RestController
-@CrossOrigin("https://extraordinary-cendol-db85f2.netlify.app/")
+@CrossOrigin("http://localhost:5173")
 public class UserController {
 	@Autowired
 	UserService userservice;
