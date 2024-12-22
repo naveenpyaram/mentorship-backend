@@ -38,6 +38,11 @@ public class UserService {
 		}
 		return true;
 	}
+	public boolean isEmailExists(String email) {
+		// TODO Auto-generated method stub
+		return userrepository.existsByEmail(email);
+	}
+	  
 
 	
 	}
