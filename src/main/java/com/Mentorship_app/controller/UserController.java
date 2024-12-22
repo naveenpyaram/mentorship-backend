@@ -22,9 +22,12 @@ public class UserController {
 	@Autowired
 	ProfileService profileservice;
 	@PostMapping("/register")
-	public ResponseEntity<User> adduser(@RequestBody User user) {
-		User user1 = userservice.adduser(user);
-		return new ResponseEntity<>(user1,HttpStatus.CREATED);
+	public ResponseEntity<Object> adduser(@RequestBody User user) {
+		 if (userservice.isEmailExists(user.getEmail())) {
+		        return new ResponseEntity<>("Email is already registered", HttpStatus.BAD_REQUEST);
+		    }
+	    User savedUser = userservice.adduser(user);
+	    return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
 	}
 	
 	@PostMapping("/login")
