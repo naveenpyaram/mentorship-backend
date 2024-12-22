@@ -20,7 +20,7 @@ import com.Mentorship_app.services.ConnectionService;
 
 
 @RestController
-@CrossOrigin("https://extraordinary-cendol-db85f2.netlify.app/")
+@CrossOrigin("http://localhost:5173")
 public class ConnectionController {
     @Autowired
     private ConnectionRequestService connectionRequestService;
